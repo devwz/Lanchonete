@@ -23,7 +23,7 @@ namespace Lanchonete.Core.Entities
                     Ingredientes = new List<Ingrediente>()
                     {
                         Ingrediente.Get("Bacon"),
-                        Ingrediente.Get("Hambúrger de Carne"),
+                        Ingrediente.Get("Hambúrguer de Carne"),
                         Ingrediente.Get("Queijo")
                     }
                 },
@@ -66,6 +66,16 @@ namespace Lanchonete.Core.Entities
             };
 
             return lanches;
+        }
+
+        public static Lanche Get(string titulo)
+        {
+            return Lanche.Get().Find(p => p.Titulo == titulo);
+        }
+
+        public static Lanche Get(int id)
+        {
+            return Lanche.Get().Find(p => p.Id == id);
         }
     }
 }

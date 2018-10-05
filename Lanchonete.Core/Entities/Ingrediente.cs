@@ -15,7 +15,7 @@ namespace Lanchonete.Core.Entities
             {
                 new Ingrediente() { Id = 1, Titulo = "Alface" },
                 new Ingrediente() { Id = 2, Titulo = "Bacon" },
-                new Ingrediente() { Id = 3, Titulo = "Hambúrger de Carne" },
+                new Ingrediente() { Id = 3, Titulo = "Hambúrguer de Carne" },
                 new Ingrediente() { Id = 4, Titulo = "Ovo" },
                 new Ingrediente() { Id = 5, Titulo = "Queijo" }
             };
@@ -26,6 +26,11 @@ namespace Lanchonete.Core.Entities
         public static Ingrediente Get(string titulo)
         {
             return Ingrediente.Get().Find(p => p.Titulo == titulo);
+        }
+
+        public static Ingrediente Get(int id)
+        {
+            return Ingrediente.Get().Find(p => p.Id == id);
         }
     }
 }
