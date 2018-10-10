@@ -11,10 +11,28 @@ namespace Lanchonete.Controllers
     [ApiController]
     public class LanchesController : ControllerBase
     {
+        DataContext context;
+
+        public LanchesController(DataContext context)
+        {
+            this.context = context;
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<Lanche>> Get()
         {
-            return Lanche.Get();
+            List<Lanche> list = context.Get<Lanche>();
+
+            if (list != null)
+            {
+                return list;
+            }
+            else
+            {
+                return NotFound();
+            }
+
+            // return Lanche.Get();
         }
 
         [HttpGet("{id}")]
