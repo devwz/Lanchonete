@@ -25,6 +25,9 @@ namespace Lanchonete
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddTransient<DataContext>();
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",
