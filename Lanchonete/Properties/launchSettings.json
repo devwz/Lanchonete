@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/lanches",
+      "launchUrl": "api/ingredientes",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "Lanchonete": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/lanches",
+      "launchUrl": "api/ingredientes",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
