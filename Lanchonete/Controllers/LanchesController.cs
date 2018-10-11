@@ -1,4 +1,4 @@
-﻿using Lanchonete.Core.Entities;
+﻿using Lanchonete.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,34 +11,16 @@ namespace Lanchonete.Controllers
     [ApiController]
     public class LanchesController : ControllerBase
     {
-        DataContext context;
-
-        public LanchesController(DataContext context)
-        {
-            this.context = context;
-        }
-
         [HttpGet]
         public ActionResult<IEnumerable<Lanche>> Get()
         {
-            List<Lanche> list = context.Get<Lanche>();
-
-            if (list != null)
-            {
-                return list;
-            }
-            else
-            {
-                return NotFound();
-            }
-
-            // return Lanche.Get();
+            throw new NotImplementedException();
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<Lanche> Get(int id)
+        [HttpGet("{titulo}")]
+        public ActionResult<Lanche> Get(string titulo)
         {
-            return Lanche.Get(id);
+            throw new NotImplementedException();
         }
     }
 }

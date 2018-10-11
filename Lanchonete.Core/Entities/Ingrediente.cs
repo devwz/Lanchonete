@@ -8,6 +8,7 @@ namespace Lanchonete.Core.Entities
     {
         public int Id { get; set; }
         public string Titulo { get; set; }
+        public decimal Preco { get; set; }
 
         public static List<Ingrediente> Get()
         {
